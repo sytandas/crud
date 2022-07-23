@@ -2,11 +2,14 @@
 
 import sys
 import psycopg2 
-
+"""
 try:
     conn = psycopg2.connect("dbname='temp' use='dbuser' host='localhost' password='dbpass'")
 except:
     print('I am unable to connect to the database')
+"""
+
+number = input(print('enter choise 1.create, 2.read, 3.update, 4.delete/modify'))
 
 def create():
     print('create function executed')
@@ -24,14 +27,14 @@ def default():
     return 'choose right one'
 
 selectChoice = {
-        1: create,
-        2: read,
-        3: update,
-        4: delete
+        1: create(),
+        2: read(),
+        3: update(),
+        4: delete()
         }
 
 def selectFunction(number):
     return selectChoice.get(number, default)()
 
-print(selectFunction(1))
+#print(selectFunction((number)))
 #print(selectFunction(10))
