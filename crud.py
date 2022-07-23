@@ -36,5 +36,5 @@ selectChoice = {
 def selectFunction(number):
     return selectChoice.get(number, default)()
 
-#print(selectFunction((number)))
+print(selectFunction((number)))
 #print(selectFunction(10))
