@@ -2,6 +2,7 @@
 
 import sys
 import psycopg2 
+
 """
 try:
     conn = psycopg2.connect("dbname='temp' use='dbuser' host='localhost' password='dbpass'")
@@ -9,32 +10,35 @@ except:
     print('I am unable to connect to the database')
 """
 
-number = input(print('enter choise 1.create, 2.read, 3.update, 4.delete/modify'))
+#number = input("1.create, 2.read, 3.update, 4.delete/modify: ")
+print("1.create, 2.read, 3.update, 4.delete/modify ")
 
 def create():
-    print('create function executed')
+    return "create"
 
 def read():
-    print('read funciton executed')
+    return "read"
 
 def update():
-    print('update function executed')
+    return "update"
 
 def delete():
-    print('delete function executed')
+    return "delete"
 
 def default():
-    return 'choose right one'
+    return "choose right one"
 
-selectChoice = {
-        1: create(),
-        2: read(),
-        3: update(),
-        4: delete()
+switcher = {
+        1: create,
+        2: read,
+        3: update,
+        4: delete
         }
 
-def selectFunction(number):
-    return selectChoice.get(number, default)()
+def selectFunction(num):
+    return switcher.get(num, default)()
 
-print(selectFunction((number)))
-#print(selectFunction(10))
+number = int(input("choose:: "))
+print(selectFunction(number))
+
+
