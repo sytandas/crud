@@ -50,3 +50,4 @@ def selectFunction(num):
     return switcher.get(num, default)()
 
 print(selectFunction(number))
+
