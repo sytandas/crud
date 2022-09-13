@@ -22,7 +22,7 @@ const getUsers = (request, response) => {
 
 // GET a single users 
 
-const getUsers = (request, response) => {
+const getUsersById = (request, response) => {
   pool.query('SELECT * FROM usrs WHERE id = $1', [id], (error, results) => {
     if (error){
       throw error;
