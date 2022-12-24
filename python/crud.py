@@ -20,7 +20,7 @@ print("connected to- ", record,"\n")
 
 cur.close()
 conn.close()
-print("Postgre connection is closed")
+print("Postgres connection is closed")
 
 number = int(input("1.create, 2.read, 3.update, 4.delete/modify\nchoose:: "))
 
