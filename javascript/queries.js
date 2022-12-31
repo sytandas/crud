@@ -5,11 +5,11 @@ const pool = new Pool({
   user: 'me',
   host: 'locathost',
   database: 'api',
-  password: 'hello',
+  password: 'password',
   port: 5432,
 })
 
-// GET all usrs
+// GET all users
 
 const getUsers = (request, response) => {
   pool.query('SELECT * FROM users ORDER BY id ASC', (error, results) => {
@@ -38,7 +38,7 @@ const createUser = (request, response) => {
     if (error) {
       throw error;
     }
-    response.status(201).send(`Users added with Id: ${results.rows[0].id}`);
+    response.status(201).send(`User added with Id: ${results.rows[0].id}`);
   });
 };
 
