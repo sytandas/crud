@@ -1,2 +1,2 @@
-Simple crud program using python/javascript and postgresql.
+Simple crud programs.
 
