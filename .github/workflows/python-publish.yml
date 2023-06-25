@@ -6,11 +6,8 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Upload Python Package
-
-on:
-  release:
-    types: [published]
+name: Unit Tests
+on:  [pull_request]
 
 permissions:
   contents: read
@@ -24,7 +21,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: Set up Python
       uses: actions/setup-python@v3
-      with:
+      with: 
         python-version: '3.x'
     - name: Install dependencies
       run: |
