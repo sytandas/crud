@@ -5,9 +5,7 @@ import string
 
 def gen_pass(l=8):
   all_char = string.ascii_letters + string.digits + string.punctuation
-
   password = ''.join(random.choice(all_char) for i in range(l))
-
   return password
 
 pass_len_str = input('input the length:')
