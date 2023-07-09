@@ -16,3 +16,4 @@ else:
 
 password = gen_pass(pass_len)
 print(f"Generated password is {password}")
+
