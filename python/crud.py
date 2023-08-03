@@ -7,6 +7,7 @@ conn=psycopg2.connect(
   host="/tmp/",
   password="123"
 )
+
 #creating a cursor object using the cursor() method - what communicate with db
 cur = conn.cursor()
 
