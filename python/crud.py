@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import psycopg2 
 
 #connection conn = psycopg2.connect("dbname=testdb user=postgres password=password")
