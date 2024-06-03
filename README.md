@@ -1,2 +1,4 @@
-Simple crud programs.
+# Simple crud app.
 
+#LICENSE
+MIT
